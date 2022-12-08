@@ -2,7 +2,7 @@
 
 // const inputSet = parseInput(input)
 
-import { engine } from "./engine";
+import { engine } from "./engine2";
 
 // http.get('http://norvig.com/ngrams/enable1.txt', (res) => {
 

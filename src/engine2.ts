@@ -2,6 +2,7 @@
 import { WordsearchRespository } from "./WordsearchRespository";
 import { wordSquareSearch } from "./wordSquareSearch";
 import * as prompt from 'prompt-sync'
+import { print } from "./utills";
 
 export const engine = async () => {
 
@@ -30,21 +31,26 @@ export const engine = async () => {
     globalThis.size = size
     globalThis.words = words
 
-    for (let i = 0; i < words.length; i++) {
+    //for (let i = 0; i < words.length; i++) {
 
-        const wordSquares = wordSquareSearch(input, words[i], size)
+        const wordSquares = wordSquareSearch(input, words[words.indexOf('feast')])
 
         if (wordSquares) {
-            console.log('\nfound word square:')
-            wordSquares.print()
+            console.log('found word square:')
+            print(wordSquares)
             console.log('')
-            break
+           // break
         }
-        if(i %1 ==0){
-            process.stdout.write('.')
+        else{
+            console.log('word square notfound.')
         }
-    }
 
+        // if(i %1 ==0){
+        //     process.stdout.write('.')
+        //     console.log(process.memoryUsage())
+        // }
+    //}
 
+// 
 }
 

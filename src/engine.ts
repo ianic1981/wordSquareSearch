@@ -2,6 +2,7 @@
 import { WordsearchRespository } from "./WordsearchRespository";
 import { wordSquareSearch } from "./wordSquareSearch";
 import * as prompt from 'prompt-sync'
+import { print } from "./utills";
 
 export const engine = async () => {
 
@@ -28,12 +29,12 @@ export const engine = async () => {
     globalThis.words = words
     globalThis.size = size
 
-    const wordSquares = words.map(word => wordSquareSearch(input, word, size)).filter(a => a != undefined);
+    const wordSquares = words.map(word => wordSquareSearch(input, word)).filter(a => a != undefined);
 
     if(wordSquares.length >0){
         console.log('found word square:')
         wordSquares.forEach(w => {
-            w.print()
+            print(w)
             console.log('')
         })
     }
