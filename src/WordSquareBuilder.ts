@@ -6,25 +6,26 @@ export class WordSquareBuilder {
 
     constructor(private validLetters: string) { }
 
-    public addRow(value: string) {
+    public addRow(value: string): WordSquareBuilder | null {
         if (this.isvalidLetter(value)) {
             this.rows.push(new WordRow(value))
+            return this
         }
-        return this
+        return null
     }
 
-    public hasFullSqure(){
+    public hasFullSqure() {
         return this.rows.length == globalThis.size
     }
 
-    public isValidWordSquare(){
+    public isValidWordSquare() {
         // console.log(this.rows)
         let valid = true
 
         for (let i = 0; i < this.rows.length; i++) {
 
             //console.log(this.wordFromRow(i) )
-            if(this.rows[i].value != this.wordFromRow(i)){
+            if (this.rows[i].value != this.wordFromRow(i)) {
                 valid = false
             }
 
@@ -32,24 +33,24 @@ export class WordSquareBuilder {
         return valid
     }
 
-    private wordFromRow(row:number){
+    private wordFromRow(row: number) {
 
-        const rowStr =this.rows.map(a => a.value[row]).toString().replaceAll(',','')
+        const rowStr = this.rows.map(a => a.value[row]).toString().replaceAll(',', '')
         return rowStr
     }
 
 
-    public print(){
-        this.rows.forEach(r=> console.log(r.value))
+    public print() {
+        this.rows.forEach(r => console.log(r.value))
     }
 
-    private addAll(rows:WordRow[]) : WordSquareBuilder{
+    private addAll(rows: WordRow[]): WordSquareBuilder {
         rows.forEach(a => this.rows.push(a))
         return this
     }
 
-    public clone(){
-        return new WordSquareBuilder(this.validLetters).addAll(this.rows) 
+    public clone() {
+        return new WordSquareBuilder(this.validLetters).addAll(this.rows)
     }
 
     private isvalidLetter(value: string): boolean {

@@ -40,8 +40,10 @@ export const engine = async () => {
             console.log('')
             break
         }
-        if(i %1 ==0){
+        if(i %10 ==0){
             process.stdout.write('.')
+            //console.log(process.memoryUsage(),process.cpuUsage())
+
         }
     }
 
