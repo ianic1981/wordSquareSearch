@@ -10,8 +10,9 @@ export class WordSquareBuilder {
     public addRow(value: string) {
         if (isvalidLetter(this,value)) {
             this.rows.push(new WordRow(value))
+            return this
         }
-        return this
+        return null
     }
 
     // public hasFullSqure(){

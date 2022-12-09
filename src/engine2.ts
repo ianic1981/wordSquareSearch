@@ -14,10 +14,10 @@ export const engine = async () => {
  `
  )
 
-    const size = prompt()('input word square size (default:5):', 5)
+    const size = prompt()('input word square size (default:7):', 7)
     console.log('size is:', size)
 
-    const input = prompt()('input word square string (default:aaaeeeefhhmoonssrrrrttttw):', 'aaaeeeefhhmoonssrrrrttttw')
+    const input = prompt()('input word square string (default:aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy):', 'aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy')
     console.log('wordsquare string is:', input)
 
 
@@ -33,7 +33,7 @@ export const engine = async () => {
 
     //for (let i = 0; i < words.length; i++) {
 
-        const wordSquares = wordSquareSearch(input, words[words.indexOf('feast')])
+        const wordSquares = wordSquareSearch(input, words[words.indexOf('bravado')])
 
         if (wordSquares) {
             console.log('found word square:')
