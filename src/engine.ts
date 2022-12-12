@@ -1,5 +1,5 @@
 
-import { WordsearchRespository } from "./WordsearchRespository";
+import { WordsearchRespository } from "./wordsearchRespository";
 import { wordSquareSearch } from "./wordSquareSearch";
 import * as prompt from 'prompt-sync'
 

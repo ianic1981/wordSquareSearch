@@ -1,7 +1,7 @@
 
 import { getOptionsForRow } from "./utills"
-import { WordRow } from "./WordRow"
-import { WordSquareBuilder } from "./WordSquareBuilder"
+import { WordRow } from "./wordRow"
+import { WordSquareBuilder } from "./wordSquareBuilder"
 
 export const wordSquareSearch = (input: string, word: string, size: number) => {
     const initialWord = new WordRow(word)

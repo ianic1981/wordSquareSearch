@@ -1,4 +1,4 @@
-import { WordRow } from "./WordRow"
+import { WordRow } from "./wordRow"
 
 export class WordSquareBuilder {
 
