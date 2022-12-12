@@ -19,10 +19,7 @@ export const engine = async () => {
     const input = prompt()('input word square string (default:aaaeeeefhhmoonssrrrrttttw):', 'aaaeeeefhhmoonssrrrrttttw')
     console.log('wordsquare string is:', input)
 
-
     const words = await new WordsearchRespository(input, size).findRelevantWords()
-
-    globalThis.words = words
 
     console.log(`found ${words.length} ${size} letter words from dictionary`)
     console.log('searching')
