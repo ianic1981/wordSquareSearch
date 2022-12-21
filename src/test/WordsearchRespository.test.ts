@@ -23,7 +23,7 @@ const emitter: any = (url: any, fn: (arg0: { on: (event: string, fun: Function) 
 
 //http.get = jest.spyOn(http, 'get').mockReturnValue(emitter)
 
-http.get = jest.fn(emitter)
+//http.get = jest.fn(emitter)
 
 
 test('wordSquareSearch for valid start value should retun puzzel', () => {
